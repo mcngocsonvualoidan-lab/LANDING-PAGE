@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="font-fix.css">
   <link rel="stylesheet" href="enhancements.css">
   <link rel="stylesheet" href="lifestyle.css">
+  <link rel="stylesheet" href="device-preview.css">
 </head>
 <body>
   <div class="announcement">MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC <span>•</span> ĐỔI TRẢ TRONG 7 NGÀY</div>
@@ -64,7 +65,14 @@
   </main>
   <footer><a class="brand" href="#">KŌKU<span>®</span></a><p>Đồ bếp tốt. Bữa cơm vui.</p><p>© 2026 KŌKU Kitchen.</p><a class="preview-link" href="preview.html" aria-label="Xem thử trên nhiều thiết bị">Xem đa thiết bị</a></footer>
 
+  <button class="device-preview-trigger" id="openDevicePreview" type="button" aria-label="Xem landing page trên nhiều thiết bị"><span>▰</span> XEM ĐA THIẾT BỊ</button>
+  <div class="device-preview-overlay" id="devicePreview" aria-hidden="true">
+    <div class="device-preview-bar"><b>KŌKU · RESPONSIVE PREVIEW</b><div class="device-preview-controls"><button class="active" data-preview-mode="desktop">▰ Desktop</button><button data-preview-mode="tablet">▯ Tablet</button><button data-preview-mode="mobile">▯ Mobile</button></div><span id="devicePreviewSize">1440 × toàn màn hình</span><button class="device-preview-close" id="closeDevicePreview" aria-label="Đóng xem trước">×</button></div>
+    <div class="device-preview-stage"><div class="device-preview-frame" id="devicePreviewFrame"><iframe src="index.html?embedded=1" title="Xem trước landing page trên thiết bị"></iframe></div></div>
+  </div>
+
   <div class="thanks" id="thanks" role="dialog" aria-modal="true" aria-hidden="true"><div class="thanks-card"><button id="closeThanks" aria-label="Đóng">×</button><div class="thanks-product"><img src="hero-pan.png" alt="Chảo KŌKU"><div class="thanks-badge">✓<span>THÀNH CÔNG</span></div></div><div class="thanks-content"><div class="eyebrow">ĐƠN HÀNG ĐÃ ĐƯỢC GHI NHẬN</div><h2>Cảm ơn bạn<br>đã chọn KŌKU.</h2><p>Đơn hàng <b id="orderCode"></b> đã được tiếp nhận. Nhân viên KŌKU sẽ gọi xác nhận trước khi giao hàng.</p><div id="summary"></div><div class="order-steps"><div class="active"><i>1</i><span><b>Đã đặt hàng</b><small>Hoàn tất</small></span></div><div><i>2</i><span><b>Xác nhận</b><small>Qua điện thoại</small></span></div><div><i>3</i><span><b>Giao hàng</b><small>Miễn phí toàn quốc</small></span></div></div><div class="thanks-note"><b>Tiếp theo sẽ thế nào?</b><span>Vui lòng để ý điện thoại. Chúng tôi sẽ liên hệ sớm để xác nhận địa chỉ và thời gian nhận hàng.</span></div><button class="button" id="backHome">TIẾP TỤC KHÁM PHÁ →</button></div></div></div>
   <script src="script.js"></script>
+  <script src="device-preview.js"></script>
 </body>
 </html>
