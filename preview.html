@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Preview thiết bị — KŌKU</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#171713;color:#fff;font-family:"Segoe UI",Arial,sans-serif;height:100vh;display:flex;flex-direction:column;overflow:hidden}.bar{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;border-bottom:1px solid #333}.brand{font-weight:800;letter-spacing:2px}.controls{display:flex;gap:8px}.controls button{border:1px solid #444;background:#242420;color:#bbb;border-radius:6px;padding:10px 15px;font:700 11px inherit;cursor:pointer}.controls button.active{background:#c8382b;color:#fff;border-color:#c8382b}.status{font-size:11px;color:#aaa}.stage{flex:1;overflow:auto;padding:28px;display:flex;justify-content:center;align-items:flex-start;background:radial-gradient(circle at 50% 0,#34342e,#181815)}.device{width:100%;height:100%;max-width:1440px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 25px 80px #000;transition:width .35s ease,height .35s ease}.device.tablet{width:768px;height:1024px}.device.mobile{width:390px;height:844px;border-radius:24px;border:7px solid #080808}.device iframe{width:100%;height:100%;border:0;background:white}@media(max-width:700px){.bar{height:auto;padding:13px;gap:10px;flex-wrap:wrap}.status{display:none}.controls{width:100%}.controls button{flex:1;padding:9px 5px}.stage{padding:14px}.device.mobile{width:100%}}
+  </style>
+</head>
+<body>
+  <header class="bar"><div class="brand">KŌKU · RESPONSIVE PREVIEW</div><div class="controls"><button class="active" data-mode="desktop">▰ Desktop</button><button data-mode="tablet">▯ Tablet</button><button data-mode="mobile">▯ Mobile</button></div><div class="status" id="status">1440 × toàn màn hình</div></header>
+  <main class="stage"><div class="device" id="device"><iframe src="index.html" title="Xem trước landing page"></iframe></div></main>
+  <script>
+    const device=document.querySelector('#device'),status=document.querySelector('#status');
+    const labels={desktop:'1440 × toàn màn hình',tablet:'768 × 1024',mobile:'390 × 844'};
+    document.querySelectorAll('[data-mode]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-mode]').forEach(x=>x.classList.remove('active'));button.classList.add('active');const mode=button.dataset.mode;device.className='device '+(mode==='desktop'?'':mode);status.textContent=labels[mode]}));
+  </script>
+</body>
+</html>

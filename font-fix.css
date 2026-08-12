@@ -1,0 +1,18 @@
+:root {
+  --serif: "Segoe UI", Arial, "Helvetica Neue", sans-serif;
+}
+
+.hero h1,
+.story h2,
+.offer h2,
+.thanks h2,
+.visual-card h3,
+.quote blockquote {
+  font-family: "Segoe UI", Arial, "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+
+.hero h1 em {
+  font-family: inherit;
+  font-weight: 700;
+}

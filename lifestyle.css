@@ -1,0 +1,40 @@
+.trusted {
+  padding: 105px 5vw;
+  background: #171713;
+  color: #fff;
+}
+.trusted-head { text-align: center; margin-bottom: 48px; }
+.trusted-head h2 { font: 700 52px/1.08 "Segoe UI",Arial,sans-serif; letter-spacing: -2px; margin: 0; }
+.trusted-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.trusted-grid article { position: relative; min-height: 560px; overflow: hidden; background: #222; }
+.trusted-grid img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.trusted-grid article:hover img { transform: scale(1.025); }
+.trusted-grid article:after { content: ""; position: absolute; inset: 25% 0 0; background: linear-gradient(transparent,rgba(8,8,7,.92)); }
+.trusted-grid article>div { position: absolute; z-index: 1; left: 0; right: 0; bottom: 0; padding: 34px; }
+.trusted-grid span { font-size: 9px; letter-spacing: 1.8px; color: #ff8a7e; font-weight: 800; }
+.trusted-grid h3 { font: 700 25px/1.28 "Segoe UI",Arial,sans-serif; margin: 13px 0; }
+.trusted-grid p { font-size: 12px; line-height: 1.6; color: #d0cec7; }
+.order-card { position: relative; border-radius: 4px; box-shadow: 0 25px 70px rgba(0,0,0,.28); overflow: hidden; }
+.order-top { margin: -34px -34px 28px; padding: 13px 22px; background: #c8382b; color: #fff; display: flex; justify-content: space-between; align-items: center; }
+.order-top span { font-size: 9px; letter-spacing: 1.7px; font-weight: 800; }
+.order-top b { font-size: 9px; background: #fff; color: #c8382b; padding: 6px 9px; border-radius: 2px; }
+.order-card h3 { font-size: 33px!important; font-weight: 700!important; }
+.plan { border-radius: 3px; transition: .2s; }
+.plan:hover { border-color: #c8382b; transform: translateY(-1px); }
+.plan strong { color: #c8382b; font-size: 16px!important; }
+.plan del { color: #999; }
+.submit { font-size: 13px!important; padding: 19px!important; }
+.order-trust { display: flex; justify-content: space-between; gap: 6px; margin: 14px 0 2px; font-size: 9px; font-weight: 700; color: #4b6650; }
+.thanks-product:before { content: "“Bữa ngon bắt đầu\A từ dụng cụ tốt.”"; white-space: pre; position: absolute; z-index: 2; left: 35px; top: 34px; color: #fff; font: 700 25px/1.25 "Segoe UI",Arial,sans-serif; text-shadow: 0 2px 15px rgba(0,0,0,.35); }
+.thanks-note:after { content: "🎁  Quà tặng: Miễn phí vận chuyển toàn quốc"; display: block; margin-top: 13px; padding: 11px 13px; background: #f5ebe0; border: 1px dashed #c9a168; color: #4e3b2a; font-size: 10px; font-weight: 700; }
+.preview-link { color:#aaa; font-size:9px; text-transform:uppercase; letter-spacing:1px; text-decoration:none; border-bottom:1px solid #555; padding-bottom:3px; }
+@media(max-width:800px) {
+  .trusted { padding: 70px 5vw; }
+  .trusted-head h2 { font-size: 37px; }
+  .trusted-grid { grid-template-columns: 1fr; }
+  .trusted-grid article { min-height: 470px; }
+  .order-top { margin: -22px -22px 24px; }
+  .order-top b { font-size: 7px; }
+  .order-trust { font-size: 8px; flex-wrap: wrap; }
+  .thanks-product:before { left: 22px; top: 22px; font-size: 18px; }
+}
