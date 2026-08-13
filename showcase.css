@@ -9,3 +9,4 @@
 @media(max-width:900px){.hero-slider{min-height:780px}.hero-slide>img{height:45%;object-position:68% center}.hero-slide .hero-copy,.hero-slide:nth-child(2) .hero-copy,.hero-slide:nth-child(3) .hero-copy{position:absolute;inset:auto 0 0;width:100%;height:58%;padding:38px 26px 64px;background:#f6f2ea;color:#201f1b}.hero-slide:nth-child(2) .hero-copy p,.hero-slide:nth-child(2) .proof,.hero-slide:nth-child(2) .text-link{color:inherit}.hero-arrow{top:35%}}
 @media(max-width:520px){.hero-slider{min-height:730px}.hero-slide>img{height:39%;object-position:70% center}.hero-slide .hero-copy,.hero-slide:nth-child(2) .hero-copy,.hero-slide:nth-child(3) .hero-copy{height:64%;padding:28px 20px 62px}.hero-arrow{top:31%}}
 .hero-slider.is-playing .hero-progress span{animation-duration:5s}
+.detail-feature h2{font-family:"Segoe UI",Arial,"Helvetica Neue",sans-serif;font-weight:700;letter-spacing:-1.8px;word-break:normal;overflow-wrap:normal;text-rendering:optimizeLegibility}
