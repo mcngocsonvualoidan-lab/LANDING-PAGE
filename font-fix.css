@@ -7,9 +7,19 @@
 .offer h2,
 .thanks h2,
 .visual-card h3,
+.detail-feature h2,
 .quote blockquote {
   font-family: "Segoe UI", Arial, "Helvetica Neue", sans-serif;
   font-weight: 700;
+}
+
+.detail-feature h2 {
+  font-family: "Segoe UI", Arial, "Helvetica Neue", sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -1.8px;
+  word-break: normal;
+  overflow-wrap: normal;
+  text-rendering: optimizeLegibility;
 }
 
 .hero h1 em {
