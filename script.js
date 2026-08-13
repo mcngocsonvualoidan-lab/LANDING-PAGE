@@ -1,3 +1,10 @@
+const isWebcakeEmbed=new URLSearchParams(location.search).get('webcake')==='1';
+if(isWebcakeEmbed){
+  document.documentElement.classList.add('webcake-embed');
+  const webcakeStyle=document.createElement('style');
+  webcakeStyle.textContent='.webcake-embed .order-card{display:none!important}.webcake-embed .order{grid-template-columns:1fr!important}.webcake-embed .offer{max-width:760px;margin:auto;text-align:center}.webcake-embed .guarantees{justify-content:center}';
+  document.head.appendChild(webcakeStyle);
+}
 const form=document.querySelector('#orderForm');
 const modal=document.querySelector('#thanks');
 document.querySelectorAll('.plan input').forEach(input=>input.addEventListener('change',()=>{document.querySelectorAll('.plan').forEach(x=>x.classList.remove('selected'));input.closest('.plan').classList.add('selected')}));
