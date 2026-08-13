@@ -7,7 +7,7 @@
   let index=0,timer=null,paused=false,startX=0;
   function restartProgress(){slider.classList.remove('is-playing');void slider.offsetWidth;if(!paused&&!reduced)slider.classList.add('is-playing')}
   function show(next,userAction=false){index=(next+slides.length)%slides.length;slides.forEach((slide,i)=>{const active=i===index;slide.classList.toggle('is-active',active);slide.setAttribute('aria-hidden',String(!active))});dots.forEach((dot,i)=>{const active=i===index;dot.classList.toggle('is-active',active);dot.setAttribute('aria-selected',String(active))});restartProgress();if(userAction)schedule()}
-  function schedule(){clearInterval(timer);if(!paused&&!reduced)timer=setInterval(()=>show(index+1),3000)}
+  function schedule(){clearInterval(timer);if(!paused&&!reduced)timer=setInterval(()=>show(index+1),5000)}
   function pause(){paused=true;slider.classList.add('is-paused');slider.classList.remove('is-playing');clearInterval(timer)}
   function resume(){paused=false;slider.classList.remove('is-paused');restartProgress();schedule()}
   slider.querySelector('.hero-prev').addEventListener('click',()=>show(index-1,true));
