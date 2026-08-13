@@ -11,21 +11,31 @@
   <link rel="stylesheet" href="lifestyle.css">
   <link rel="stylesheet" href="device-preview.css">
   <link rel="stylesheet" href="motion.css">
+  <link rel="stylesheet" href="showcase.css">
 </head>
 <body>
   <div class="announcement">MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC <span>•</span> ĐỔI TRẢ TRONG 7 NGÀY</div>
   <header class="nav"><a class="brand" href="#">KŌKU<span>®</span></a><nav><a href="#features">Ưu điểm</a><a href="#story">Cấu tạo</a><a href="#order">Đặt hàng</a></nav><a class="nav-cta" href="#order">Mua ngay</a></header>
 
   <main>
-    <section class="hero">
-      <img src="hero-pan.png" alt="Chảo chống dính Nhật Bản màu đen với tay cầm vân gỗ">
-      <div class="hero-copy">
-        <div class="eyebrow">TINH HOA GIAN BẾP NHẬT</div>
-        <h1>Nấu ngon hơn.<br><em>Nhẹ nhàng hơn.</em></h1>
-        <p>Chống dính bền bỉ, truyền nhiệt nhanh và tay cầm cách nhiệt — một chiếc chảo cho mọi món ngon mỗi ngày.</p>
-        <div class="hero-actions"><a class="button" href="#order">ĐẶT HÀNG — 399.000Đ</a><a class="text-link" href="#story">Khám phá cấu tạo ↓</a></div>
-        <div class="proof"><b>4.9/5</b><span class="stars">★★★★★</span><span>Hơn 2.000 gian bếp tin dùng</span></div>
+    <section class="hero hero-slider" aria-label="Giới thiệu chảo KŌKU" aria-roledescription="carousel">
+      <div class="hero-track">
+        <article class="hero-slide is-active" aria-hidden="false">
+          <img src="hero-pan.png" alt="Chảo chống dính Nhật Bản màu đen với tay cầm vân gỗ">
+          <div class="hero-copy"><div class="eyebrow">TINH HOA GIAN BẾP NHẬT</div><h1>Nấu ngon hơn.<br><em>Nhẹ nhàng hơn.</em></h1><p>Chống dính bền bỉ, truyền nhiệt nhanh và tay cầm cách nhiệt — một chiếc chảo cho mọi món ngon mỗi ngày.</p><div class="hero-actions"><a class="button" href="#order">ĐẶT HÀNG — 399.000Đ</a><a class="text-link" href="#story">Khám phá cấu tạo ↓</a></div><div class="proof"><b>4.9/5</b><span class="stars">★★★★★</span><span>Hơn 2.000 gian bếp tin dùng</span></div></div>
+        </article>
+        <article class="hero-slide" aria-hidden="true">
+          <img src="lifestyle-chef.png" alt="Đầu bếp chuyên nghiệp sử dụng chảo KŌKU">
+          <div class="hero-copy"><div class="eyebrow">CHUẨN NHIỆT TRONG TỪNG MÓN</div><h1>Nóng nhanh.<br><em>Chín đều.</em></h1><p>Khả năng truyền nhiệt ổn định giúp bạn kiểm soát độ chín tốt hơn — từ món áp chảo đến món xào lửa lớn.</p><div class="hero-actions"><a class="button" href="#order">NHẬN ƯU ĐÃI HÔM NAY</a><a class="text-link" href="#detail-heat">Xem khả năng truyền nhiệt ↓</a></div><div class="proof"><b>BẾP TRƯỞNG TIN DÙNG</b><span>Chủ động nhiệt, trọn vị ngon</span></div></div>
+        </article>
+        <article class="hero-slide" aria-hidden="true">
+          <img src="lifestyle-family.png" alt="Người mẹ chuẩn bị bữa ăn gia đình với chảo KŌKU">
+          <div class="hero-copy"><div class="eyebrow">BỮA CƠM KHỎE HƠN MỖI NGÀY</div><h1>Ít dầu hơn.<br><em>Dễ rửa hơn.</em></h1><p>Bề mặt chống dính giúp món ăn nguyên vẹn, giảm lượng dầu sử dụng và rút ngắn thời gian dọn rửa sau mỗi bữa cơm.</p><div class="hero-actions"><a class="button" href="#order">CHỌN KŌKU CHO GIA ĐÌNH</a><a class="text-link" href="#detail-healthy">Khám phá lợi ích ↓</a></div><div class="proof"><b>NHẸ VIỆC BẾP</b><span>Thêm thời gian bên gia đình</span></div></div>
+        </article>
       </div>
+      <button class="hero-arrow hero-prev" type="button" aria-label="Slide trước">‹</button><button class="hero-arrow hero-next" type="button" aria-label="Slide tiếp theo">›</button>
+      <div class="hero-dots" role="tablist" aria-label="Chọn slide"><button class="is-active" type="button" aria-label="Xem slide 1" aria-selected="true"></button><button type="button" aria-label="Xem slide 2" aria-selected="false"></button><button type="button" aria-label="Xem slide 3" aria-selected="false"></button></div>
+      <div class="hero-progress" aria-hidden="true"><span></span></div>
     </section>
 
     <section class="benefit-strip" id="features">
@@ -42,6 +52,12 @@
     <section class="visual-usps" aria-label="Ưu điểm nổi bật của sản phẩm">
       <article class="visual-card"><img src="usp-handle.png" alt="Cận cảnh tay cầm vân gỗ cách nhiệt"><div><span>CẦM CHẮC — KHÔNG NÓNG TAY</span><h3>Đảo món an toàn,<br>di chuyển nhẹ nhàng.</h3><p>Tay cầm công thái học hạn chế truyền nhiệt, cho cảm giác chắc chắn ngay cả khi chảo đầy thức ăn.</p><ul class="mini-proof"><li>Không cần găng tay khi nấu thông thường</li><li>Vân gỗ chống trượt, dễ cầm nắm</li></ul></div></article>
       <article class="visual-card reverse"><img src="usp-versatile.png" alt="Chảo đa năng cho món chiên, xào, nấu và hầm"><div><span>MỘT CHẢO — NHIỀU CÁCH NẤU</span><h3>Chiên, xào, nấu, hầm.<br>Món nào cũng ngon.</h3><p>Lòng chảo sâu giữ được nhiều nguyên liệu và nước dùng. Từ trứng ốp la đến cá áp chảo hay món hầm đều gọn trong một chiếc chảo.</p><ul class="mini-proof"><li>Ít dụng cụ hơn, bếp gọn hơn</li><li>Phù hợp bữa ăn nhanh lẫn món cầu kỳ</li></ul></div></article>
+    </section>
+
+    <section class="detail-showcase" aria-label="Khám phá sâu hơn về chảo KŌKU">
+      <article class="detail-feature" id="detail-nonstick"><figure><img src="usp-layers.png" alt="Cấu tạo bề mặt chống dính nhiều lớp của chảo KŌKU"><figcaption>CẤU TẠO NHIỀU LỚP</figcaption></figure><div><span class="detail-number">01</span><div class="eyebrow">CHỐNG DÍNH THẤY RÕ</div><h2>Trứng trượt nhẹ.<br>Cá vẫn nguyên vẹn.</h2><p>Bề mặt được thiết kế để giảm bám dính, giúp lật và đảo món dễ dàng hơn. Thức ăn ít vỡ nát, chảo cũng nhanh sạch chỉ sau vài thao tác lau rửa.</p><ul><li>Hạn chế sát chảo khi chiên và áp chảo</li><li>Dễ vệ sinh, không cần chà rửa mạnh</li><li>Bền đẹp khi sử dụng và bảo quản đúng cách</li></ul><a class="detail-link" href="#order">SỞ HỮU CHẢO KŌKU →</a></div></article>
+      <article class="detail-feature reverse" id="detail-healthy"><figure><img src="lifestyle-family.png" alt="Bữa cơm gia đình lành mạnh được nấu bằng chảo KŌKU"><figcaption>NHẸ VIỆC BẾP MỖI NGÀY</figcaption></figure><div><span class="detail-number">02</span><div class="eyebrow">ÍT DẦU — TRỌN VỊ</div><h2>Bữa cơm lành mạnh.<br>Mẹ thêm thảnh thơi.</h2><p>Khả năng chống dính giúp giảm lượng dầu khi chế biến mà món ăn vẫn vàng đẹp, thơm ngon. Nấu nhanh hơn, dọn gọn hơn và có thêm thời gian cho gia đình.</p><ul><li>Chiên rán ngon với lượng dầu vừa đủ</li><li>Món ăn giữ hình dáng và màu sắc hấp dẫn</li><li>Một chiếc chảo cho nhiều bữa ăn trong ngày</li></ul><a class="detail-link" href="#order">CHỌN GÓI ƯU ĐÃI →</a></div></article>
+      <article class="detail-feature" id="detail-heat"><figure><img src="lifestyle-chef.png" alt="Đầu bếp kiểm soát nhiệt khi nấu bằng chảo KŌKU"><figcaption>KIỂM SOÁT NHIỆT TỐT HƠN</figcaption></figure><div><span class="detail-number">03</span><div class="eyebrow">NÓNG NHANH — TỎA ĐỀU</div><h2>Đúng độ chín.<br>Trọn vị món ngon.</h2><p>Thân chảo chắc chắn hỗ trợ truyền nhiệt nhanh và đều, giúp nguyên liệu chín đồng nhất. Bạn tiết kiệm thời gian đứng bếp mà vẫn chủ động trong từng công thức.</p><ul><li>Áp chảo vàng đều, xào nhanh giữ độ giòn</li><li>Hạn chế điểm quá nóng làm cháy cục bộ</li><li>Phù hợp từ bữa ăn nhanh đến món cầu kỳ</li></ul><a class="detail-link" href="#order">ĐẶT HÀNG — 399.000Đ →</a></div></article>
     </section>
 
     <section class="uses"><div class="uses-heading"><div class="eyebrow">4 CÔNG DỤNG — 1 CHIẾC CHẢO</div><h2>Giải quyết mọi bữa ăn.</h2><p>Dùng hằng ngày, từ bữa sáng 10 phút đến mâm cơm gia đình.</p></div><div class="versatile"><div><span>01</span><h3>Chiên áp chảo</h3><p>Vàng giòn bên ngoài, mọng nước bên trong mà không cần nhiều dầu.</p></div><div><span>02</span><h3>Xào nhanh</h3><p>Truyền nhiệt đều giúp rau củ giữ màu sắc và độ giòn.</p></div><div><span>03</span><h3>Nấu & hầm</h3><p>Lòng sâu rộng, thoải mái cho món sốt và món nhiều nước.</p></div><div><span>04</span><h3>Lau là sạch</h3><p>Bề mặt chống dính giúp rút ngắn thời gian dọn rửa.</p></div></div></section>
@@ -76,5 +92,6 @@
   <script src="script.js"></script>
   <script src="device-preview.js"></script>
   <script src="motion.js"></script>
+  <script src="showcase.js"></script>
 </body>
 </html>
