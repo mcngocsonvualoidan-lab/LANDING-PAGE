@@ -2,7 +2,24 @@ const isWebcakeEmbed=new URLSearchParams(location.search).get('webcake')==='1';
 if(isWebcakeEmbed){
   document.documentElement.classList.add('webcake-embed');
   const webcakeStyle=document.createElement('style');
-  webcakeStyle.textContent='.webcake-embed .order-card{display:none!important}.webcake-embed .order{grid-template-columns:1fr!important}.webcake-embed .offer{max-width:760px;margin:auto;text-align:center}.webcake-embed .guarantees{justify-content:center}';
+  webcakeStyle.textContent=`
+    .webcake-embed .order-card{display:none!important}
+    .webcake-embed .order{
+      grid-template-columns:minmax(0,1fr) minmax(420px,1fr)!important;
+      gap:5vw!important;
+      align-items:center
+    }
+    .webcake-embed .offer{
+      max-width:620px;
+      margin:0!important;
+      text-align:left!important
+    }
+    .webcake-embed .guarantees{justify-content:start!important}
+    @media(max-width:800px){
+      .webcake-embed .order{grid-template-columns:1fr!important}
+      .webcake-embed .offer{max-width:none}
+    }
+  `;
   document.head.appendChild(webcakeStyle);
 }
 const form=document.querySelector('#orderForm');
