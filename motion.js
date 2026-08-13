@@ -1,6 +1,6 @@
 const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const revealTargets=[
-  ...document.querySelectorAll('.benefit-strip div,.story-copy,.story-visual,.visual-card,.versatile>div,.trusted-grid article,.quote,.offer,.order-card')
+  ...document.querySelectorAll('.benefit-strip div,.story-copy,.story-visual,.visual-card,.detail-feature,.versatile>div,.trusted-grid article,.quote,.offer,.order-card')
 ];
 revealTargets.forEach((element,index)=>{
   element.classList.add('reveal');
@@ -15,7 +15,7 @@ if(reduceMotion){revealTargets.forEach(element=>element.classList.add('is-visibl
   revealTargets.forEach(element=>observer.observe(element));
 }
 
-const parallaxBlocks=[...document.querySelectorAll('.story-visual,.visual-card,.trusted-grid article')];
+const parallaxBlocks=[...document.querySelectorAll('.story-visual,.visual-card,.detail-feature figure,.trusted-grid article')];
 parallaxBlocks.forEach(element=>element.classList.add('parallax-media'));
 let ticking=false;
 function updateParallax(){
